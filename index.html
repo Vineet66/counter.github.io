@@ -1,0 +1,72 @@
+<html>
+<head>
+    <title>
+    
+    
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <style>
+        body {
+ background-image: url("vin.jpg");
+ background-repeat: no-repeat;
+            width: 100%;
+}
+        .tex{
+            margin-top: 50px;
+            width: 500px;
+            height: 300px;
+            margin-left: 450px;
+            border-radius: 10px;
+            padding: 5px;
+            border: 2px solid blue;
+            position: relative;
+            outline: none;
+        }
+        .para{
+            font-size: 24px;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+    <body>
+        <center><h2 style="margin-top: 30px;color: white;">Letters and Words Counter</h2></center>
+    <div class="">
+        
+        <textarea id="con" style="" class="tex"></textarea><br>
+        <p id="show" class="para" style="margin-left: 600px;color: white;"> </p>
+        <p id="showords"  class="para" style="margin-left: 600px;color: white;"> </p>
+        
+        
+        <input type="button" onclick="countword()" value="submit" class="btn btn-primary btn-lg" style="margin-left: 650px;">
+                </div>
+    
+    <script>
+        const countword = () => {
+            
+            let now = document.getElementById('con').value.length;
+            let noc = document.getElementById('con').value;
+            noc = noc.match(/\w+/g );
+            noc = noc.length;
+            console.log(noc);
+            
+            document.getElementById('show').innerHTML = "The Total Letters are " + now;
+            document.getElementById('showords').innerHTML = "The Total words are " + noc;
+        }
+        
+        
+        
+        </script>
+    </body>
+</html>
